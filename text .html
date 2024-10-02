@@ -1,0 +1,56 @@
+npm is librabry
+pwd= present working directory
+mkdir= 
+
+
+
+package-lock.json = file tyachya andr dakvl aste konta package install ahe dependence dakhvte kashya vr depend ahe aani version.
+nodemon = nodemon he library ahe he change zal file madhe kadhi khi tr save krte aani run krte
+
+
+import kel 'fs' librabry 
+var fs= require('fs');  reuirement ahe fs librabry chi
+
+
+json data ha avaliable aste eka string formate madhe aani light weight ahe  transfer karna ek system se dusri system me easy hai because light weight hai
+
+lodash is  use to calculate unique value 
+
+mongoose is use as bridge in between mongodb and server(database and node.js)
+
+What is mongodb
+
+
+bodyParser.json() automatically parser the json data from the request body and convert it into a javascript object which is then stored in the req.body
+
+
+
+
+app.get('/person/:workType',async(req,res)=>
+{
+   
+  try{
+    const workType = req.params.workType; 
+    if(workType == 'chef' || workType == 'manager' || workType=='waiter')
+        {
+               const respone = await Person.find({work:workType});
+               console.log('data fetched');
+                           res.status(200).json(respone);
+
+        } else{
+      res.status(400).json({error:'invalid work type'});
+        }
+  }
+  catch(err)
+  {
+    console.log(err);
+    res.status(500).json({error:'internal server error'});
+  }
+})
+     
+
+
+
+
+
+
